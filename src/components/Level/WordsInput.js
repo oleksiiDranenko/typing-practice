@@ -11,6 +11,7 @@ export const WordsInput = (props) => {
         <input 
             className={colorTheme ? classes.light : classes.dark}
             onChange={props.onChange}
+            value={props.value}
             spellCheck={false}
         />
     )

@@ -21,24 +21,22 @@ export const UpperCasedPage = () => {
     const bubbleSound = new Audio(sound1);
 
     const charTyped = (e) => {
-        //if the word typed right - generate new
-        if(inputValue.trim() === UpperCasedArray[arrayIndex]){
-            setArrayIndex(getIndex());
-            setInputValue('');
-            e.target.value = '';
-        } else{
-            setInputValue(e.target.value);
-            if(soundOn){
-                bubbleSound.play();
-            }
+        setInputValue(e.target.value);
+        if(soundOn){
+            bubbleSound.play();
         }
     }
+    //if the word typed right - generate new
+    if(inputValue.trim() === UpperCasedArray[arrayIndex]){
+        setArrayIndex(getIndex());
+        setInputValue('');
+    } 
 
     return(
         <section className={classes.section}>
             <div className={classes.elementsDiv}>
                 <WordsDisplay value={UpperCasedArray[arrayIndex]}/>
-                <WordsInput onChange={charTyped}/>
+                <WordsInput value={inputValue} onChange={charTyped}/>
             </div>
         </section>
     )
