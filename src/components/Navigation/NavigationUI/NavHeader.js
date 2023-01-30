@@ -19,28 +19,28 @@ export const NavHeader = () => {
     //adding different headers depending on the location
     const locationStatement = () => {
         switch(location.pathname){
-            case '/levels': 
+            case '/typing-practice/levels': 
                 return 'Awailable levels'
-            case '/levels/lowercased':
+            case '/typing-practice/levels/lowercased':
                 return <>
-                    <SmallButton value='Levels' to='/levels'/>
-                    <SmallButton value='Settings' to='/settings'/>
+                    <SmallButton value='Levels' to='/typing-practice/levels'/>
+                    <SmallButton value='Settings' to='/typing-practice/settings'/>
                 </>
             case '/levels/uppercased':
                 return <>
-                    <SmallButton value='Levels' to='/levels'/>
-                    <SmallButton value='Settings' to='/settings'/>
+                    <SmallButton value='Levels' to='/typing-practice/levels'/>
+                    <SmallButton value='Settings' to='/typing-practice/settings'/>
                 </>
             case '/levels/with-symbols':
                 return <>
-                    <SmallButton value='Levels' to='/levels'/>
-                    <SmallButton value='Settings' to='/settings'/>
+                    <SmallButton value='Levels' to='/typing-practice/levels'/>
+                    <SmallButton value='Settings' to='/typing-practice/settings'/>
                 </>
             case '/settings':
                 return 'Settings'
-            case '/version-history':
+            case '/typing-practice/version-history':
                 return 'Version history'
-            case '/to-employer':
+            case '/typing-practice/to-employer':
                 return 'To employer'
             default:
                 return null

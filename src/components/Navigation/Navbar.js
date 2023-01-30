@@ -16,7 +16,7 @@ export const Navbar = () => {
         <section className={classes.section}>
             
             <div className={classes.leftDiv}>
-                {location.pathname !== '/' ? <GoBackButton/> : null}
+                {location.pathname !== '/typing-practice/' ? <GoBackButton/> : null}
             </div>
 
             <NavHeader/>

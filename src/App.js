@@ -34,14 +34,14 @@ function App() {
 
 				<SoundContext.Provider value={{soundOn, setSoundOn}}>
 				<Routes>
-					<Route path='/' element={<HomePage/>}/>
-					<Route path='/levels' element={<LevelsPage/>}/>
-					<Route path='/settings' element={<SettingsPage/>}/>
-					<Route path='/levels/lowercased' element={<LowerCasedPage/>}/>
-					<Route path='/levels/uppercased' element={<UpperCasedPage/>}/>
-					<Route path='/levels/with-symbols' element={<WithSymbolsPage/>}/>
-					<Route path='/version-history' element={<VersionHistory/>}/>
-					<Route path='/to-employer' element={<ToEmployerPage/>}/>
+					<Route path='/typing-practice/' element={<HomePage/>}/>
+					<Route path='/typing-practice/levels' element={<LevelsPage/>}/>
+					<Route path='/typing-practice/settings' element={<SettingsPage/>}/>
+					<Route path='/typing-practice/levels/lowercased' element={<LowerCasedPage/>}/>
+					<Route path='/typing-practice/levels/uppercased' element={<UpperCasedPage/>}/>
+					<Route path='/typing-practice/levels/with-symbols' element={<WithSymbolsPage/>}/>
+					<Route path='/typing-practice/version-history' element={<VersionHistory/>}/>
+					<Route path='/typing-practice/to-employer' element={<ToEmployerPage/>}/>
 				</Routes>
 				</SoundContext.Provider>
 
