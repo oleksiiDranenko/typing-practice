@@ -1,0 +1,56 @@
+.section{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+.divLight{
+    width: 500px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-family: 'Inter';
+    font-size: 16px;
+    color: rgb(64, 64, 64);
+    line-height: 30px;
+
+    background: none;
+    box-shadow: 0px 4px 4px rgba(64, 64, 64, 0.25);
+    border-radius: 10px;
+
+    padding: 25px 50px;
+
+    box-sizing: border-box;
+}
+
+.divDark{
+    width: 500px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-family: 'Inter';
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+
+    background: none;
+    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+
+    padding: 25px 50px;
+
+    box-sizing: border-box;
+}

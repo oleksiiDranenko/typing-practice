@@ -1,0 +1,34 @@
+.section{
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    flex-direction: row;
+
+    position: fixed;
+    top: 0;
+
+    box-sizing: border-box;
+}
+
+.leftDiv{
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightDiv{
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}

@@ -1,0 +1,38 @@
+.light{
+    width: 130px;
+    height: 40px;
+    border: 1px solid rgba(64, 64, 64, 0.5);
+    border-radius: 10px;
+    background: none;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    font-family: 'Inter';
+    font-size: 16px;
+    color: rgb(64, 64, 64);
+    text-decoration: none;
+}
+
+.dark{
+    width: 130px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background: none;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    font-family: 'Inter';
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+

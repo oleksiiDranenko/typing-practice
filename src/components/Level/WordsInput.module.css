@@ -1,0 +1,43 @@
+.light{
+    width: 450px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border: none;
+    border-bottom: 1px solid rgba(64, 64, 64, 0.5);
+    background: none;
+
+    font-family: 'Inter';
+    font-size: 20px;
+    color: rgb(64, 64, 64);
+}
+
+.light:focus{
+    outline: none;
+}
+
+.dark{
+    width: 450px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background: none;
+
+    font-family: 'Inter';
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.dark:focus{
+    outline: none;
+}

@@ -1,0 +1,53 @@
+.light{
+    width: 190px;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(64, 64, 64, 0.25);
+    background: none;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    font-family: 'Inter';
+    font-size: 14px;
+    color: rgb(64, 64, 64);
+    text-decoration: none;
+
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.light:hover{
+    box-shadow: 0px 5px 5px rgba(64, 64, 64, 0.5);
+}
+
+.dark{
+    width: 190px;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    background: none;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    font-family: 'Inter';
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.dark:hover{
+    box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.5);
+}
