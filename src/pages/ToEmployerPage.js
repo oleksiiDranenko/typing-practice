@@ -14,7 +14,7 @@ export const ToEmployerPage = () => {
                 It is made without using Typescript and Redux. 
                 It uses local storage to store the states. 
                 Here you can practise in speed typing with three levels of different difficulty.
-                App uses js arrays to display random words instead of API. 
+                App uses prewritten arrays to display random words instead of API. 
                 Im planning to make custom level where you can add your own custom words.
             </div>
         </section>
