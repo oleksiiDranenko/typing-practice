@@ -18,11 +18,11 @@ export const HomePage = () => {
                     Typing Practice
                 </h1>
 
-                <LargeButton value='Go To Levels' to={'/levels'}/>
+                <LargeButton value='Go To Levels' to={'/typing-practice/levels'}/>
                 
                 <div className={classes.buttonsDiv}>
-                    <MediumButton value='Version History' to='/version-history'/>
-                    <MediumButton value='To Employer' to='/to-employer'/>
+                    <MediumButton value='Version History' to='/typing-practice/version-history'/>
+                    <MediumButton value='To Employer' to='/typing-practice/to-employer'/>
                 </div>
             </div>
         </section>

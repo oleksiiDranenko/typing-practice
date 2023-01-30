@@ -7,9 +7,9 @@ export const LevelsPage = () => {
     return(
         <section className={classes.section}>
             <div className={classes.elementsDiv}>
-                <LargeButton value='Lowercased' to='/levels/lowercased'/>
-                <LargeButton value='Uppercased' to='/levels/uppercased'/>
-                <LargeButton value='With symbols' to='/levels/with-symbols'/>
+                <LargeButton value='Lowercased' to='/typing-practice/levels/lowercased'/>
+                <LargeButton value='Uppercased' to='/typing-practice/levels/uppercased'/>
+                <LargeButton value='With symbols' to='/typing-practice/levels/with-symbols'/>
             </div>
         </section>
     )
