@@ -21,6 +21,7 @@ export const Checkbox = (props) => {
             <img 
                 className={classes.img}
                 src={colorTheme ? checkLight : checkDark}
+                alt='completed icon'
             />
         ) : null}
     </button>
