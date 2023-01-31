@@ -26,12 +26,12 @@ export const NavHeader = () => {
                     <SmallButton value='Levels' to='/typing-practice/levels'/>
                     <SmallButton value='Settings' to='/typing-practice/settings'/>
                 </>
-            case '/levels/uppercased':
+            case '/typing-practice/levels/uppercased':
                 return <>
                     <SmallButton value='Levels' to='/typing-practice/levels'/>
                     <SmallButton value='Settings' to='/typing-practice/settings'/>
                 </>
-            case '/levels/with-symbols':
+            case '/typing-practice/levels/with-symbols':
                 return <>
                     <SmallButton value='Levels' to='/typing-practice/levels'/>
                     <SmallButton value='Settings' to='/typing-practice/settings'/>

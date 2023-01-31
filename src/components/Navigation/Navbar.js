@@ -8,12 +8,15 @@ import { NavHeader } from './NavigationUI/NavHeader';
 
 //hook
 import { useLocation } from 'react-router-dom';
+import { useContext } from 'react';
+import { ColorThemeContext } from '../../App';
 
 export const Navbar = () => {
     const location = useLocation();
+    const {colorTheme} = useContext(ColorThemeContext);
 
     return (
-        <section className={classes.section}>
+        <section className={colorTheme ? classes.sectionLight : classes.sectionDark}>
             
             <div className={classes.leftDiv}>
                 {location.pathname !== '/typing-practice' &&  

@@ -6,7 +6,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    background: none;
+    background-color: rgb(255, 255, 255);
 
     font-family: 'Inter';
     font-size: 14px;
@@ -28,7 +28,7 @@
     font-family: 'Inter';
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
-    background: none;
+    background-color: rgb(64, 64, 64);
 
     position: fixed;
     bottom: 0%;

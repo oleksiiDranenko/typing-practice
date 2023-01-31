@@ -6,8 +6,9 @@ export const VersionHistory = () => {
     return(
         <section className={classes.section}>
             <div className={classes.elementsDiv}>
-                <VersionElement version='1.0' value='Dark theme and typing sounds'/>
+                <VersionElement version='0.1.0' value='Dark theme and typing sounds'/>
             </div>
+            <div className={classes.downDiv}></div>
         </section>
     )
 }

@@ -1,6 +1,23 @@
-.section{
+.sectionLight{
     width: 100%;
     height: 100px;
+
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: row;
+
+    position: fixed;
+    top: 0;
+
+    box-sizing: border-box;
+}
+
+.sectionDark{
+    width: 100%;
+    height: 100px;
+
+    background-color: rgb(64, 64, 64);
 
     display: flex;
     flex-direction: row;
