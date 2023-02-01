@@ -1,0 +1,74 @@
+.sectionLight{
+    width: 400px;
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+
+    border: 1px solid rgba(64, 64, 64, 0.5);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+.sectionDark{
+    width: 400px;
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.valueLight{
+    width: 300px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Inter';
+    font-size: 16px;
+    color: rgb(64, 64, 64);
+}
+.valueDark{
+    width: 300px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Inter';
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+
+.deleteDiv{
+    width: 100px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    width: 25px;
+    height: 25px;
+
+    border: none;
+    background: none;
+}
+
+.img{
+    width: 20px;
+    height: 20px;
+}

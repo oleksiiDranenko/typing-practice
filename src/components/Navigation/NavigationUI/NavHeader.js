@@ -33,11 +33,13 @@ export const NavHeader = () => {
                 </>
             case '/typing-practice/levels/custom':
                 return <>
-                    <SmallButton value='Manage' to='/typing-practice/manage'/>
+                    <SmallButton value='Customise' to='/typing-practice/customise'/>
                     <SmallButton value='Settings' to='/typing-practice/settings'/>
                 </>
             case '/typing-practice/settings':
                 return 'Settings'
+            case '/typing-practice/customise':
+                return 'Customise'
             case '/typing-practice/version-history':
                 return 'Version history'
             case '/typing-practice/to-employer':

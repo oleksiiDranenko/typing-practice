@@ -19,7 +19,10 @@
 .light:focus{
     outline: none;
 }
-
+.light::placeholder{
+    font-size: 16px;
+    color: rgba(64, 64, 64, 0.5);;
+}
 .light:focus::placeholder {
     color: transparent;
 }
@@ -45,11 +48,10 @@
 .dark:focus{
     outline: none;
 }
-
+.dark::placeholder{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);;
+}
 .dark:focus::placeholder {
     color: transparent;
-}
-
-::placeholder{
-    font-size: 16px;
 }
