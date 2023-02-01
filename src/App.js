@@ -17,12 +17,39 @@ import { ToEmployerPage } from './pages/ToEmployerPage';
 //creating context
 export const ColorThemeContext = createContext();
 export const SoundContext = createContext();
+export const CustomArrayContext = createContext();
 
 function App() {
-	//if light - true
-	//getting the colorTheme from the local storage 
-	const [colorTheme, setColorTheme] = useState(JSON.parse(localStorage.getItem('colorTheme')));
-	const [soundOn, setSoundOn] = useState(JSON.parse(localStorage.getItem('soundOn')));
+
+	//creating states for the themes
+
+	//colorTheme
+	const [colorTheme, setColorTheme] = useState(() => {
+		if(JSON.parse(localStorage.getItem('colorTheme')) === null){
+			return true //default if there is no value in local storage
+		} else {
+			return JSON.parse(localStorage.getItem('colorTheme'))
+		}
+	});
+
+	//soundTheme
+	const [soundOn, setSoundOn] = useState(() => {
+		if(JSON.parse(localStorage.getItem('soundOn')) === null){
+			return false//default if there is no value in local storage
+		} else {
+			return JSON.parse(localStorage.getItem('soundOn'))
+		}
+	});
+
+	//customArray
+	const [customArray, setCustomArray] = useState(() => {
+		if(JSON.parse(localStorage.getItem('customArray')) === null){
+			return []//default if there is no value in local storage
+		} else {
+			return JSON.parse(localStorage.getItem('customArray'))
+		}
+	});
+
 	
 	return(
 	<div className='App'>
@@ -31,17 +58,19 @@ function App() {
 
 				<Navbar/>
 
+				<CustomArrayContext.Provider value={{customArray, setCustomArray}}>
 				<SoundContext.Provider value={{soundOn, setSoundOn}}>
-				<Routes>
-					<Route path='/typing-practice/' element={<HomePage/>}/>
-					<Route path='/typing-practice/levels' element={<LevelsPage/>}/>
-					<Route path='/typing-practice/settings' element={<SettingsPage/>}/>
-					<Route path='/typing-practice/levels/lowercased' element={<LowerCasedPage/>}/>
-					<Route path='/typing-practice/levels/uppercased' element={<UpperCasedPage/>}/>
-					<Route path='/typing-practice/version-history' element={<VersionHistory/>}/>
-					<Route path='/typing-practice/to-employer' element={<ToEmployerPage/>}/>
-				</Routes>
+					<Routes>
+						<Route path='/typing-practice/' element={<HomePage/>}/>
+						<Route path='/typing-practice/levels' element={<LevelsPage/>}/>
+						<Route path='/typing-practice/settings' element={<SettingsPage/>}/>
+						<Route path='/typing-practice/levels/lowercased' element={<LowerCasedPage/>}/>
+						<Route path='/typing-practice/levels/uppercased' element={<UpperCasedPage/>}/>
+						<Route path='/typing-practice/version-history' element={<VersionHistory/>}/>
+						<Route path='/typing-practice/to-employer' element={<ToEmployerPage/>}/>
+					</Routes>
 				</SoundContext.Provider>
+				</CustomArrayContext.Provider>
 
 				<VersionSection/>
 
