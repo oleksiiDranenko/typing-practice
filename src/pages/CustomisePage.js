@@ -11,18 +11,21 @@ export const CustomisePage = () => {
             </div>
 
             <div className={classes.elementsDiv}>
-                <CustomiseElement value='element1'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
-                <CustomiseElement value='element2'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
+                <CustomiseElement value='test element'/>
             </div>
 
             <div className={classes.spaceDiv}></div>

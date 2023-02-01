@@ -20,6 +20,7 @@ export const CustomiseElement = (props) => {
                     <img 
                         className={classes.img}
                         src={colorTheme ? basketLight : basketDark}
+                        alt='basket icon'
                     />
                 </button>
             </div>
