@@ -20,6 +20,10 @@
     outline: none;
 }
 
+.light:focus::placeholder {
+    color: transparent;
+}
+
 .dark{
     width: 450px;
     height: 70px;
@@ -40,4 +44,12 @@
 
 .dark:focus{
     outline: none;
+}
+
+.dark:focus::placeholder {
+    color: transparent;
+}
+
+::placeholder{
+    font-size: 16px;
 }

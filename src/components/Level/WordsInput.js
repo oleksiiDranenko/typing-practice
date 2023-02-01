@@ -13,6 +13,7 @@ export const WordsInput = (props) => {
             onChange={props.onChange}
             value={props.value}
             spellCheck={false}
+            placeholder='Type the word here...'
         />
     )
 }
