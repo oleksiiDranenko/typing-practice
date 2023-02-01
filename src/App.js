@@ -12,7 +12,6 @@ import { LowerCasedPage } from './pages/LowerCasedPage';
 import { SettingsPage } from './pages/SettingsPage';
 import { UpperCasedPage } from './pages/UpperCasedPage';
 import { VersionHistory } from './pages/VersionHistory';
-import { WithSymbolsPage } from './pages/WithSymbolsPage';
 import { ToEmployerPage } from './pages/ToEmployerPage';
 
 //creating context
@@ -39,7 +38,6 @@ function App() {
 					<Route path='/typing-practice/settings' element={<SettingsPage/>}/>
 					<Route path='/typing-practice/levels/lowercased' element={<LowerCasedPage/>}/>
 					<Route path='/typing-practice/levels/uppercased' element={<UpperCasedPage/>}/>
-					<Route path='/typing-practice/levels/with-symbols' element={<WithSymbolsPage/>}/>
 					<Route path='/typing-practice/version-history' element={<VersionHistory/>}/>
 					<Route path='/typing-practice/to-employer' element={<ToEmployerPage/>}/>
 				</Routes>
