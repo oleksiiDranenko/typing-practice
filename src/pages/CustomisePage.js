@@ -1,8 +1,14 @@
+//classes
+import classes from './CustomisePage.module.css';
+//custom elements
 import { CustomiseElement } from '../components/Customise/CustomiseElement';
 import { CustomiseInputForm } from '../components/Customise/CustomiseInputForm';
-import classes from './CustomisePage.module.css';
+//context
+import { useContext } from 'react';
+import { CustomArrayContext } from '../App';
 
 export const CustomisePage = () => {
+    const { customArray } = useContext(CustomArrayContext);
 
     return(
         <section className={classes.section}>
@@ -11,21 +17,9 @@ export const CustomisePage = () => {
             </div>
 
             <div className={classes.elementsDiv}>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
-                <CustomiseElement value='test element'/>
+                {customArray.map((element, key) => {
+                    return <CustomiseElement value={element} key={key}/>
+                })}
             </div>
 
             <div className={classes.spaceDiv}></div>
