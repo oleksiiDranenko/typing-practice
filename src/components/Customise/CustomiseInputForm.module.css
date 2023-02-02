@@ -29,7 +29,7 @@
 }
 .inputLight::placeholder{
     font-size: 14px;
-    color: rgb(64, 64, 64);
+    color: rgba(64, 64, 64, 0.5);
     z-index: -1;
 }
 .inputLight:focus::placeholder {
@@ -58,7 +58,7 @@
 }
 .inputDark::placeholder{
     font-size: 14px;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.5);
     z-index: -1;
 }
 .inputDark:focus::placeholder {

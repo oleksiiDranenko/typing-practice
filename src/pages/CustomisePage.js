@@ -7,6 +7,7 @@ import { CustomiseInputForm } from '../components/Customise/CustomiseInputForm';
 import { useContext, useEffect, useState } from 'react';
 //context
 import { CustomArrayContext } from '../App';
+import { AlertNoElements } from '../components/Customise/AlertNoElements';
 
 export const CustomisePage = () => {
     const { customArray, setCustomArray } = useContext(CustomArrayContext);
@@ -49,6 +50,7 @@ export const CustomisePage = () => {
             </div>
 
             <div className={classes.elementsDiv}>
+                {customArray.length === 0 ? <AlertNoElements value='There are no elements yet...'/> : null}
                 {customArray.map((element, key) => {
                     return <CustomiseElement 
                                 value={element.value} 
