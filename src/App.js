@@ -14,6 +14,7 @@ import { UpperCasedPage } from './pages/UpperCasedPage';
 import { VersionHistory } from './pages/VersionHistory';
 import { ToEmployerPage } from './pages/ToEmployerPage';
 import { CustomisePage } from './pages/CustomisePage';
+import { CustomLevelPage } from './pages/CustomLevelPage';
 
 //creating context
 export const ColorThemeContext = createContext();
@@ -67,6 +68,7 @@ function App() {
 						<Route path='/typing-practice/settings' element={<SettingsPage/>}/>
 						<Route path='/typing-practice/levels/lowercased' element={<LowerCasedPage/>}/>
 						<Route path='/typing-practice/levels/uppercased' element={<UpperCasedPage/>}/>
+						<Route path='/typing-practice/levels/custom' element={<CustomLevelPage/>}/>
 						<Route path='/typing-practice/customise' element={<CustomisePage/>}/>
 						<Route path='/typing-practice/version-history' element={<VersionHistory/>}/>
 						<Route path='/typing-practice/to-employer' element={<ToEmployerPage/>}/>
