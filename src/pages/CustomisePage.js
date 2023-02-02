@@ -3,8 +3,9 @@ import classes from './CustomisePage.module.css';
 //custom elements
 import { CustomiseElement } from '../components/Customise/CustomiseElement';
 import { CustomiseInputForm } from '../components/Customise/CustomiseInputForm';
+//hooks
+import { useContext, useEffect, useState } from 'react';
 //context
-import { useContext, useState } from 'react';
 import { CustomArrayContext } from '../App';
 
 export const CustomisePage = () => {
@@ -22,6 +23,11 @@ export const CustomisePage = () => {
         }
         setInputValue('');
     }
+
+    //when customArray is changing, renew the array in local storage
+    useEffect(() => {
+        localStorage.setItem('customArray', JSON.stringify(customArray));
+    }, [customArray])
 
     return(
         <section className={classes.section}>
