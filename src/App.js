@@ -45,7 +45,7 @@ function App() {
 	//customArray
 	const [customArray, setCustomArray] = useState(() => {
 		if(JSON.parse(localStorage.getItem('customArray')) === null){
-			return ['first', 'second']//default if there is no value in local storage
+			return []//default if there is no value in local storage
 		} else {
 			return JSON.parse(localStorage.getItem('customArray'))
 		}

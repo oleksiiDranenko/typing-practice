@@ -4,16 +4,33 @@ import classes from './CustomisePage.module.css';
 import { CustomiseElement } from '../components/Customise/CustomiseElement';
 import { CustomiseInputForm } from '../components/Customise/CustomiseInputForm';
 //context
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CustomArrayContext } from '../App';
 
 export const CustomisePage = () => {
-    const { customArray } = useContext(CustomArrayContext);
+    const { customArray, setCustomArray } = useContext(CustomArrayContext);
+    const [inputValue, setInputValue] = useState('');
+
+    const inputValueChange = (e) => {
+        setInputValue(e.target.value);
+    }
+
+    const newElementAdd = (e) => {
+        e.preventDefault();
+        if(inputValue.trim() !== ''){
+            setCustomArray([...customArray, inputValue]);
+        }
+        setInputValue('');
+    }
 
     return(
         <section className={classes.section}>
             <div className={classes.inputDiv}>
-                <CustomiseInputForm/>
+                <CustomiseInputForm
+                    inputValue={inputValue}
+                    inputOnChange={inputValueChange}
+                    onSubmit={newElementAdd}
+                />
             </div>
 
             <div className={classes.elementsDiv}>
