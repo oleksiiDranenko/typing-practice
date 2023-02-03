@@ -7,7 +7,7 @@ export const VersionSection = () => {
 
     return (
         <section className={colorTheme ? classes.light : classes.dark}>
-            This app is on version 0.2.0-alpha
+            This app is on version 0.2.0
         </section>
     )
 }
