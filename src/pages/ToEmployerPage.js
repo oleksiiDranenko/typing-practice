@@ -14,8 +14,9 @@ export const ToEmployerPage = () => {
                 It is made without using Typescript and Redux. 
                 It uses local storage to store the states. 
                 Here you can practise in speed typing with two default levels.
-                But you can also make your own custom level.
-                For default levels app uses prewritten JavaScript arrays instead of API
+                For default levels app uses prewritten JavaScript arrays instead of API.
+                But you can also make your own custom level by adding new elements to your custom array.
+                Additionally, you can enable sounds when typing in the level settings
             </div>
         </section>
     )
