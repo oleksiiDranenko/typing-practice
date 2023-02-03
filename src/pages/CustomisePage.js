@@ -8,6 +8,7 @@ import { useContext, useEffect, useState, useRef } from 'react';
 //context
 import { CustomArrayContext } from '../App';
 import { AlertNoElements } from '../components/Customise/AlertNoElements';
+import { DeleteAll } from '../components/Customise/DeleteAll.js';
 
 export const CustomisePage = () => {
     const { customArray, setCustomArray } = useContext(CustomArrayContext);
@@ -21,6 +22,7 @@ export const CustomisePage = () => {
 
     const newElementAdd = (e) => {
         e.preventDefault();
+        
         if(inputValue.trim() !== '' && inputValue.length <= 20){
             const element = {
                 value: inputValue,
@@ -28,10 +30,13 @@ export const CustomisePage = () => {
             }
             setCustomArray([...customArray, element]);
             setInputPlaceholder('Enter new element...')
-        } else if(inputValue.length > 20){
+        } 
+        
+        else if(inputValue.length > 20){
             setInputPlaceholder('Max length is 20 characters...');
             inputRef.current.blur();
         }
+        
         setInputValue('');
     }
 
@@ -41,8 +46,12 @@ export const CustomisePage = () => {
         localStorage.setItem('customArray', JSON.stringify(customArray));
     }, [customArray])
 
+
     const deleteElement = (deleteEl) => {
         setCustomArray(customArray.filter((element) => element.id !== deleteEl))
+    }
+    const deleteAll = () => {
+        setCustomArray([])
     }
 
     return(
@@ -59,6 +68,7 @@ export const CustomisePage = () => {
 
             <div className={classes.elementsDiv}>
                 {customArray.length === 0 ? <AlertNoElements value='There are no elements yet...'/> : null}
+                {customArray.length !== 0 ? <DeleteAll buttonOnClick={deleteAll}/> : null}
                 {customArray.map((element, key) => {
                     return <CustomiseElement 
                                 value={element.value} 
