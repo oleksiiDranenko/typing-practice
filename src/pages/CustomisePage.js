@@ -4,7 +4,7 @@ import classes from './CustomisePage.module.css';
 import { CustomiseElement } from '../components/Customise/CustomiseElement';
 import { CustomiseInputForm } from '../components/Customise/CustomiseInputForm';
 //hooks
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 //context
 import { CustomArrayContext } from '../App';
 import { AlertNoElements } from '../components/Customise/AlertNoElements';
@@ -12,6 +12,8 @@ import { AlertNoElements } from '../components/Customise/AlertNoElements';
 export const CustomisePage = () => {
     const { customArray, setCustomArray } = useContext(CustomArrayContext);
     const [inputValue, setInputValue] = useState('');
+    const [inputPlaceholder, setInputPlaceholder] = useState('Enter new element...');
+    const inputRef = useRef(null);
 
     const inputValueChange = (e) => {
         setInputValue(e.target.value);
@@ -19,12 +21,16 @@ export const CustomisePage = () => {
 
     const newElementAdd = (e) => {
         e.preventDefault();
-        if(inputValue.trim() !== ''){
+        if(inputValue.trim() !== '' && inputValue.length <= 20){
             const element = {
                 value: inputValue,
                 id: customArray.length === 0 ? 0 : customArray[customArray.length - 1].id + 1
             }
             setCustomArray([...customArray, element]);
+            setInputPlaceholder('Enter new element...')
+        } else if(inputValue.length > 20){
+            setInputPlaceholder('Max length is 20 characters...');
+            inputRef.current.blur();
         }
         setInputValue('');
     }
@@ -46,6 +52,8 @@ export const CustomisePage = () => {
                     inputValue={inputValue}
                     inputOnChange={inputValueChange}
                     onSubmit={newElementAdd}
+                    placeholder={inputPlaceholder}
+                    inputRef={inputRef}
                 />
             </div>
 

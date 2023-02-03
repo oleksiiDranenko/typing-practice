@@ -13,9 +13,10 @@ export const CustomiseInputForm = (props) => {
         >
             <input 
                 className={colorTheme ? classes.inputLight : classes.inputDark}
-                placeholder='Enter new element...'
+                placeholder={props.placeholder}
                 value={props.inputValue}
                 onChange={props.inputOnChange}
+                ref={props.inputRef}
             />
             <button className={colorTheme ? classes.buttonLight : classes.buttonDark}>Add</button>
         </form>
