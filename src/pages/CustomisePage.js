@@ -23,13 +23,18 @@ export const CustomisePage = () => {
     const newElementAdd = (e) => {
         e.preventDefault();
         
-        if(inputValue.trim() !== '' && inputValue.length <= 20){
+        if(inputValue.trim() === ''){
+            setInputPlaceholder('No value entered...');
+            inputRef.current.blur();
+        }
+        
+        else if(inputValue.trim() !== '' && inputValue.length <= 20){
             const element = {
                 value: inputValue,
                 id: customArray.length === 0 ? 0 : customArray[customArray.length - 1].id + 1
             }
             setCustomArray([...customArray, element]);
-            setInputPlaceholder('Enter new element...')
+            setInputPlaceholder('Enter new element...');
         } 
         
         else if(inputValue.length > 20){
